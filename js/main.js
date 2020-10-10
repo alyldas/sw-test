@@ -1,5 +1,9 @@
 console.log("Loading main.js");
 
+var root = require("../root.js");
+
+root.test();
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     navigator.serviceWorker.register('../sw.js').then(function (registration) {
