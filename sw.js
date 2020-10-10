@@ -1,6 +1,5 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-    '',
     '/',
     'index.html',
     'css/main.css',
@@ -54,7 +53,7 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', function (event) {
 
-    var cacheAllowlist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+    var cacheAllowlist = ['my-site-cache-v1', 'pages-cache-v1', 'blog-posts-cache-v1'];
 
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
